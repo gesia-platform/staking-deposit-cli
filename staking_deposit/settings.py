@@ -16,6 +16,7 @@ PRATER = 'prater'
 SEPOLIA = 'sepolia'
 ZHEJIANG = 'zhejiang'
 HOLESKY = 'holesky'
+GESIA = 'gesia'
 
 # Mainnet setting
 MainnetSetting = BaseChainSetting(
@@ -37,6 +38,10 @@ ZhejiangSetting = BaseChainSetting(
 HoleskySetting = BaseChainSetting(
     NETWORK_NAME=HOLESKY, GENESIS_FORK_VERSION=bytes.fromhex('01017000'),
     GENESIS_VALIDATORS_ROOT=bytes.fromhex('9143aa7c615a7f7115e2b6aac319c03529df8242ae705fba9df39b79c59fa8b1'))
+# Gesia Mainnet setting
+GesiaSetting = BaseChainSetting(
+    NETWORK_NAME=GESIA, GENESIS_FORK_VERSION=bytes.fromhex('20000089'),
+    GENESIS_VALIDATORS_ROOT=bytes.fromhex('698811727c2b02c943c144b8dff167731ad59c36a084f14c0ea31bcca8ee8a6d'))
 
 
 ALL_CHAINS: Dict[str, BaseChainSetting] = {
@@ -46,6 +51,7 @@ ALL_CHAINS: Dict[str, BaseChainSetting] = {
     SEPOLIA: SepoliaSetting,
     ZHEJIANG: ZhejiangSetting,
     HOLESKY: HoleskySetting,
+    GESIA: GesiaSetting,
 }
 
 
